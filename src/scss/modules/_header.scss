@@ -1,0 +1,29 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.logo-container-img {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.cart-container-img {
+  width: 100px;
+  height: 100px;
+}
+
+.cart-img {
+  width: 100%;
+}
