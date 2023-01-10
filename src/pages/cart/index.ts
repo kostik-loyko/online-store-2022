@@ -1,14 +1,14 @@
 import Page from 'core/templates/page';
 
-class Card extends Page {
+class Cart extends Page {
 
   constructor(id: string) {
     super(id);
   }
 
   render() {
-    this.container.append(this.renderTitle('Card Page'));
+    this.container.append(this.renderTitle('Cart Page'));
     return this.container;
   }
 }
-export default Card;
+export default Cart;

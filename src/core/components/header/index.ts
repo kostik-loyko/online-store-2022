@@ -1,24 +1,28 @@
-import { linksData } from '../constants';
+import Component from 'core/templates/component';
+import { IdData, linksData } from '../constants';
+import CartIcon from './cart';
+import Logo from './logo';
+import Total from './total';
 
-class Header {
-  protected container: HTMLElement;
+class Header extends Component {
+  private logo: Logo;
+  private total: Total;
+  private cartIcon: CartIcon;
 
   constructor(tagName: string, idName: string) {
-    this.container = document.createElement(tagName);
-    this.container.id = idName;
+    super(tagName, idName);
+    this.logo = new Logo('logo', `#${IdData.MainID}`);
+    this.cartIcon = new CartIcon('cart-icon', `#${IdData.CartID}`);
+    this.total = new Total('div', 'total');
   }
 
-  protected renderLinks() {
-    linksData.forEach(linkData => {
-      const link = document.createElement('a');
-      link.textContent = linkData.title;
-      link.href = `#${linkData.id}`;
-      this.container.append(link);
-    });
+  private renderHeader() {
+    this.container.append(this.logo.render(),
+      this.total.render(), this.cartIcon.render());
   }
 
   render() {
-    this.renderLinks();
+    this.renderHeader();
     return this.container;
   }
 }

@@ -1,7 +1,7 @@
 export const enum IdData {
   MainID = 'main-page',
   ProductID = 'product-page',
-  CardID = 'card-page'
+  CartID = 'cart-page'
 }
 
 export const linksData = [
@@ -14,7 +14,7 @@ export const linksData = [
     id: IdData.ProductID,
   },
   {
-    title: 'Card_Page',
-    id: IdData.CardID,
+    title: 'Cart_Page',
+    id: IdData.CartID,
   }
 ]
